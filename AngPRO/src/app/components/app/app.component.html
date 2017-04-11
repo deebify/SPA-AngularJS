@@ -1,9 +1,11 @@
 <div class="app">
 <!-- this the template for the Component -->
-<h1>
-  {{title}} @ {{age}}
-  <br>
-  Developed by {{name}}
-</h1>
+
+<p>Root Component</p>
+
+<!-- we set properties as binding from outside (public properties)-->
+<app-app-data-binding [number]=3224>
+  <h1>Hello World!</h1>
+</app-app-data-binding>
 
 </div>

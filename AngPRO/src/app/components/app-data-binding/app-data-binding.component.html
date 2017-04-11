@@ -1,0 +1,24 @@
+<h1>String Interpolation</h1>
+{{stringInterpolation}} || {{numberInterpolation}}
+<hr>
+<h1> 2 way to work with property binding </h1>
+<p>Property Binding work around using String Interpolation method</p>
+<input type="text" value="{{name}}">
+<br>
+<p>this is the property binding value property binding [value]="property"</p>
+<input type="text" [value]="name">
+<p>that's tell angular that's not default attribute its a property</p>
+<hr>
+<h1>ngClass and ngStyle Directive for Property Binding</h1>
+<p [ngClass]="{para: true}">Is this Styled ? </p>
+<p [ngClass]="{para: onTest()}">Is this Styled ? </p>
+<p [ngStyle]="{color: 'blue'}">Is this Styled ? -- using ngStyle directive</p>
+<hr>
+<h1>Custom Binding</h1>
+<p>{{number}}</p>
+<hr>
+<h1>Event Binding</h1>
+<app-event-binding (clickable)="onClc($event)"></app-event-binding>
+<hr>
+<h1>2 way data binding</h1>
+<app-two-way-binding></app-two-way-binding>
