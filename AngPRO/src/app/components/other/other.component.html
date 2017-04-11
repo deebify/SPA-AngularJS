@@ -1,0 +1,25 @@
+<div class="app">
+  this is my second component
+  <br>
+  <h1> component inside component </h1>
+    
+    <app-other2>
+      <!-- this is the ng-content will replace inside the template-->
+      <article>
+        Story Number 1
+        <p>ths is a first story</p>
+      </article>
+    </app-other2>
+  
+  <br>
+  <h1> other 2 component inside other component </h1> 
+  
+  <app-other2>
+    <!-- ng-content will render the content of selector -->
+    <article>
+      Hello World
+      <p> this is my story</p>
+    </article>
+  </app-other2>
+
+</div>
