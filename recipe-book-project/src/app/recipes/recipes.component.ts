@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Recipe} from './recipe'
 @Component({
   selector: 'rec-book-app-recipes',
   templateUrl: './recipes.component.html',
 })
 export class RecipesComponent implements OnInit {
 
+  selectedRecipe : Recipe;
   constructor() { }
 
   ngOnInit() {
   }
-
+  recieveRecipe(){
+    console.log('Recieved Event')
+  }
 }

@@ -9,10 +9,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styles: []
 })
 export class EventBindingComponent  {
-
+  // an EventEmitter
   @Output("clickable") clicked = new EventEmitter<string>();
 
   onClc(){
+    //Event will Emit "it Works! String"
     this.clicked.emit("it works!")
   }
 

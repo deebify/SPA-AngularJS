@@ -10,7 +10,9 @@
   <div class="col-xs-12">
     <!-- Recipes Item-->
     <ul class="list-group">
-      <rec-book-app-recipe-item [recipe]="a"></rec-book-app-recipe-item>
+      <rec-book-app-recipe-item [recipe]="a" (click)="onSelected(a)"></rec-book-app-recipe-item>
+      <rec-book-app-recipe-item [recipe]="b" (click)="onSelected(b)"></rec-book-app-recipe-item>
+      <rec-book-app-recipe-item [recipe]="c" (click)="onSelected(c)"></rec-book-app-recipe-item>
     </ul>
   </div>
 </div>
