@@ -1,0 +1,21 @@
+<h1>Attributes Direction -- Refresher</h1>
+
+<h2>ngClass / ngStyle</h2>
+<style>
+  html {
+    margin: auto;
+  }
+  div {
+    width : 200px;
+    height : 200px;
+    background-color: yellow;
+  }
+  .border {
+    background-color: red;
+    border: 5px solid green;
+  }
+</style>
+<h1>{{x}}</h1>
+<div [ngClass]="{border : (x), background:blue}"></div> 
+
+<button (click)="clicked()">Click Me </button>
