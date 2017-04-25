@@ -2,20 +2,38 @@
 
 <h2>ngClass / ngStyle</h2>
 <style>
-  html {
-    margin: auto;
-  }
-  div {
-    width : 200px;
-    height : 200px;
-    background-color: yellow;
-  }
-  .border {
-    background-color: red;
-    border: 5px solid green;
-  }
+    html {
+        margin: auto;
+    }
+    
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+    }
+    
+    .border {
+        background-color: red;
+        border: 5px solid green;
+    }
 </style>
 <h1>{{x}}</h1>
-<div [ngClass]="{border : (x), background:blue}"></div> 
+<div [ngClass]="{border : x, background:blue}"></div>
+<hr>
+<p>this is another way to achieve the same where u can access the class of the div as [class.boder] = ture/false the squere brackets is the property binding
+</p>
+<hr>
+<div [class.border]="x"></div>
+<hr>
+<p>this is how the ngStyle work [ngStyle]=" 'css-class':'value' "</p>
+<div [ngStyle]="{'background-color':'gray'}"></div>
 
 <button (click)="clicked()">Click Me </button>
+
+<hr>
+<h1>Custom Attribute Directive</h1>
+<p>this is how the directive work as we inject the element in the constructor to the directive and change the color of style
+    <strong>    this.element.nativeElement.style.backgroundColor = 'black';
+</strong>
+</p>
+<div dirHighlight></div>
