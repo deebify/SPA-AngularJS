@@ -41,7 +41,9 @@
 
 <h1>Structural Directive</h1>
 <h2>*ngIf</h2>
-<div *ngIf="x">Conditional Text</div>
+<p *ngIf="x">Conditional Text, NOTE THAT
+    <strong>this is a conditional text inner in the conditional parent div</strong>
+</p>
 <button (click)="clicked()">Switch</button>
 <br>
 <br>
@@ -69,3 +71,7 @@
         Conditional Text ... appears !!
     </div>
 </ng-template>
+
+<div *unless="x"> Unless Directive {{switch}}
+    <p>Huaaaaaaa </p>
+</div>
