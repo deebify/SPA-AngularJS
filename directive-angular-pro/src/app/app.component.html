@@ -9,7 +9,6 @@
     div {
         width: 200px;
         height: 200px;
-        background-color: yellow;
     }
     
     .border {
@@ -17,6 +16,7 @@
         border: 5px solid green;
     }
 </style>
+
 <h1>{{x}}</h1>
 <div [ngClass]="{border : x, background:blue}"></div>
 <hr>
@@ -36,4 +36,36 @@
     <strong>    this.element.nativeElement.style.backgroundColor = 'black';
 </strong>
 </p>
-<div dirHighlight></div>
+<div dirHighlight [highlightcolor]="'green'" [defaultcolor]="'black'"></div>
+<div dirHighlight [highlightcolor]="'red'" [defaultcolor]="'black'"></div>
+
+<h1>Structural Directive</h1>
+<h2>*ngIf</h2>
+<div *ngIf="x">Conditional Text</div>
+<button (click)="clicked()">Switch</button>
+<br>
+<br>
+<br>
+<br>
+<h2>*ngFor</h2>
+<ul>
+    <li *ngFor="let item of items; let i = index">{{item}} -- (Index: {{i}})</li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<h2>ngSwitch</h2>
+<div [ngSwitch]="value">
+    <p *ngSwitchCase="10">10</p>
+    <p *ngSwitchCase="103">103</p>
+    <p *ngSwitchCase="100">Here</p>
+    <p *ngSwitchDefault>Not Exist</p>
+
+</div>
+
+<ng-template [ngIf]="x">
+    <div>
+        Conditional Text ... appears !!
+    </div>
+</ng-template>

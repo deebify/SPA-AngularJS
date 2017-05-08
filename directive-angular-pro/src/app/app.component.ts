@@ -14,5 +14,9 @@ export class AppComponent {
       else
       this.x = true
   }
+
+  private items = [1,2,3,4,5,6];
+
+  private value = 0;
 }
 

@@ -1,24 +1,27 @@
-import { Directive, ElementRef, Renderer, HostListener, HostBinding} from '@angular/core';
+import { Directive, ElementRef, Renderer,Input, HostListener, HostBinding, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[dirHighlight]'
 })
 
 export class HighlightDirective {
-  private bkcolor = 'white'
+  @Input('defaultcolor') defaultcolor;
+  @Input('highlightcolor') highlightcolor;
+
+  private bkcolor = this.defaultcolor
 
   @HostListener('mouseenter') 
   mousehover(){
-    this.bkcolor = 'red'
+    this.bkcolor = this.highlightcolor
   }
   
   @HostListener('mouseleave') 
   mouseleave(){
-    this.bkcolor = 'green'
+    this.bkcolor = this.defaultcolor
   }
 
   @HostBinding('style.backgroundColor')
-  get color(){
+  get setColor(){
     return this.bkcolor;
   }
   // from dependency injection in constructor
